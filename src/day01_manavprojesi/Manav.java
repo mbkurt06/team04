@@ -93,6 +93,21 @@ public class Manav {
 
         return sarkuteriFiyatlar();
     }
+    public static void printManav(){
+        System.out.println("No  Ürün    Fiyat\n" +
+                " == ======= =======\n" +
+                " 00 Domates 2.10 TL\n" +
+                " 01 Patates 3.20 TL\n" +
+                " 02 Biber   1.50 TL\n" +
+                " 03 Soğan   2.30 TL\n" +
+                " 04 Havuç   3.10 TL\n" +
+                " 05 Elma    1.20 TL\n" +
+                " 06 Muz     1.90 TL\n" +
+                " 07 Çilek   6.10 TL\n" +
+                " 08 Kavun   4.30 TL\n" +
+                " 09 Üzüm    2.70 TL\n" +
+                " 10 Limon   0.50 TL\n");
+    }
 
     public static void main(String[] args) {
         System.out.println("     ==Gida Marketimize Hoş Geldiniz!==");
@@ -101,19 +116,7 @@ public class Manav {
         Scanner sc=new Scanner(System.in);
         int secim=sc.nextInt();
         if(secim==1){           // Kullanici ilk basta hangi urun paketine gidecekse burdan secim yapar
-            System.out.println("No  Ürün    Fiyat\n" +
-                    " == ======= =======\n" +
-                    " 00 Domates 2.10 TL\n" +
-                    " 01 Patates 3.20 TL\n" +
-                    " 02 Biber   1.50 TL\n" +
-                    " 03 Soğan   2.30 TL\n" +
-                    " 04 Havuç   3.10 TL\n" +
-                    " 05 Elma    1.20 TL\n" +
-                    " 06 Muz     1.90 TL\n" +
-                    " 07 Çilek   6.10 TL\n" +
-                    " 08 Kavun   4.30 TL\n" +
-                    " 09 Üzüm    2.70 TL\n" +
-                    " 10 Limon   0.50 TL\n");
+            printManav();
         } else if (secim==2) {
             System.out.println("No  Ürün    Fiyat\n" +
                     " == ======= =======\n" +
