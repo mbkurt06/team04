@@ -11,7 +11,7 @@ public class Manav {
     static Scanner scan = new Scanner(System.in);
     public static void main(String[] args) {
 
-
+        System.out.println("adem branch");
 
         System.out.println(" No  Ürün    Fiyat\n" +
                 " == ======= =======\n" +
