@@ -94,7 +94,7 @@ public class Manav {
         return sarkuteriFiyatlar();
     }
     public static void printManav(){
-        System.out.println("No  Ürün    Fiyat\n" +
+        System.out.println(" No  Ürün    Fiyat\n" +
                 " == ======= =======\n" +
                 " 00 Domates 2.10 TL\n" +
                 " 01 Patates 3.20 TL\n" +
@@ -109,74 +109,46 @@ public class Manav {
                 " 10 Limon   0.50 TL\n");
     }
 
+    public static void printSarkuteri(){
+        System.out.println(" No  Ürün    Fiyat\n" +
+                " == ======= =======\n" +
+                " 00 Pastirma  2.10 TL\n" +
+                " 01 Sucuk     3.20 TL\n" +
+                " 02 Selam     1.50 TL\n" +
+                " 03 Sosis     2.30 TL\n" +
+                " 04 Kavurma   3.10 TL\n" +
+                " 05 Duman     1.20 TL\n" +
+                " 06 Jambon    1.90 TL\n" );
+
+
+    }
+
+    public static void printSutUrun(){
+        System.out.println(" No  Ürün    Fiyat\n" +
+                " == ======= =======\n" +
+                " 00 Sut           2.10 TL\n" +
+                " 01 Beyaz Peynir  3.20 TL\n" +
+                " 02 Süzme         1.50 TL\n" +
+                " 03 Yogurt        2.30 TL\n" +
+                " 04 Kefir         3.10 TL\n" +
+                " 05 Burma peynir  1.20 TL\n" +
+                " 06 Ayran         1.90 TL\n" );
+
+    }
+
     public static void main(String[] args) {
         System.out.println("     ==Gida Marketimize Hoş Geldiniz!==");
         System.out.println("Asagidaki sayilar ile istediginiz urunlere gidin \n" +
-                "  1 - Manav\n  2 - Sharkuteri\n   3 - Sut urunleri  \nSeciminiz: ");
-        Scanner sc=new Scanner(System.in);
-        int secim=sc.nextInt();
-        if(secim==1){           // Kullanici ilk basta hangi urun paketine gidecekse burdan secim yapar
+                "   1 - Manav\n   2 - Sharkuteri\n   3 - Sut urunleri  \nSeciminiz: ");
+        Scanner sc = new Scanner(System.in);
+        int secim = sc.nextInt();
+        if (secim == 1) {           // Kullanici ilk basta hangi urun paketine gidecekse burdan secim yapar
             printManav();
-        } else if (secim==2) {
-            System.out.println("No  Ürün    Fiyat\n" +
-                    " == ======= =======\n" +
-                    " 00 Pastirma  2.10 TL\n" +
-                    " 01 Sucuk     3.20 TL\n" +
-                    " 02 Selam     1.50 TL\n" +
-                    " 03 Sosis     2.30 TL\n" +
-                    " 04 Kavurma   3.10 TL\n" +
-                    " 05 Duman     1.20 TL\n" +
-                    " 06 Jambon    1.90 TL\n" );
-        } else if (secim==3) {
-            System.out.println("No  Ürün    Fiyat\n" +
-                    " == ======= =======\n" +
-                    " 00 Sut           2.10 TL\n" +
-                    " 01 Beyaz Peynir  3.20 TL\n" +
-                    " 02 Süzme         1.50 TL\n" +
-                    " 03 Yogurt        2.30 TL\n" +
-                    " 04 Kefir         3.10 TL\n" +
-                    " 05 Burma peynir  1.20 TL\n" +
-                    " 06 Ayran         1.90 TL\n" );
+        } else if (secim == 2) {
+            printSarkuteri();
+        } else if (secim == 3) {
+            printSutUrun();
         } else
             System.out.println("Yanlis secim yaptiniz");
-
-
-
-        //Adem Bey
-//>>>>>>> a623c0ecb3eff496403d0b6fcf353ec7e8d3fe3b
-        sepeteEklenenUrunler(sutUrunleriName);
-        sepetUrunFiyatilari(sepetUrunFiyati);
-        sepetUrunlerKg(sepetUrunKg);
-
-
-        /*
-        sepetUrunler  list(string), sepetKg(double), sepetFiyat(double)
-       tum islemleri methodlara yaptır.
-
-       method--> public static void sepeteEkle(int ürünNo, double sepetKg){}
-       alısverise devam mı ödeme mi?
-       (1- method olarak yapılacak, listeler class seviyesinde, methodlara parametrer
-       olarak seçilen ürünün cins kilosu gibi bilgiler verilecek
-         */
-
-
-//>>>>>>> 2c60fb6492c266b9a471a99721f66094801c5183
     }
-
-    public static void sepetUrunlerKg(List<Double> sepetUrunKg) {
-        sepetUrunKg.add(1.5);
-
-    }
-
-    public static void sepetUrunFiyatilari(List<Double> sepetUrunFiyati) {
-        sepetUrunFiyati.add(2.1);
-    }
-
-    public static void sepeteEklenenUrunler(List<String> sepetUrunIsmi) {
-        sepetUrunIsmi.add("Domates");
-    }
-
-
-
-
 }
