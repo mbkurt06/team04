@@ -8,6 +8,7 @@ public class Manav {
     static List<String> sutUrunleriName =new ArrayList<>();//sepetteki urunlerin ismini tutan liste
     static List<Double> sepetUrunFiyati= new ArrayList<>();// sepetteki urunlerin fiyati
     static List<Double> sepetUrunKg= new ArrayList<>();
+    static List<String> sepetUrunIsmi= new ArrayList<>();
     static Scanner scan = new Scanner(System.in);
 
 
@@ -136,10 +137,6 @@ public class Manav {
                 " 06 Ayran         1.90 TL\n" );
     }
 
-    
-   
-
-    }
  public static void sepeteUrunMiktariEkle(Double miktar) {
         sepetUrunKg.add(miktar);
 
@@ -152,6 +149,8 @@ public class Manav {
     public static void sepeteUrunAdiEkle(String urunAdi) {
         sepetUrunIsmi.add(urunAdi);
     }
+
+
     public static void main(String[] args) {
         System.out.println("     ==Gida Marketimize Hoş Geldiniz!==");
         System.out.println("Asagidaki sayilar ile istediginiz urunlere gidin \n" +
