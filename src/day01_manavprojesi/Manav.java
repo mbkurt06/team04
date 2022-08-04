@@ -159,6 +159,11 @@ public class Manav {
 
     }
 
+    public static void sepeteUrunMiktariEkle(int index, Double miktar) {
+        sepetUrunKg.set(index, miktar);
+
+    }
+
     //Adem Bey
     public static void sepeteUrunFiyatiEkle(Double price) {
         sepetUrunFiyati.add(price);
@@ -174,7 +179,7 @@ public class Manav {
 
     }
 
-    public static void main(String[] args) {
+    public static void runMarket() {
         manavUrunleriIsimList = manavUrunler();
         manavUrunleriFiyatList = manavFiyat();
         boolean alisVeriseDevamMi = true;
@@ -185,6 +190,8 @@ public class Manav {
         while (alisVeriseDevamMi) {
             secim = 0;
             cikis = 1;
+            int index = -1;
+            Double urunMiktariKg = 0.0;
 
             System.out.println("     ==Gida Marketimize Hoş Geldiniz!==");
             System.out.println("Asagidaki sayilar ile istediginiz urunlere gidin \n" +
@@ -197,15 +204,23 @@ public class Manav {
                     printManav();
                     System.out.println("Bir ust menuye gecmek icin 20 a basiniz");
                     urunSecim = scan.nextInt();
+
                     if (urunSecim >= 0 && urunSecim < manavUrunleriIsimList.size()) {
-                        sepeteUrunAdiEkle(manavUrunleriIsimList.get(urunSecim));
-                        System.out.println(manavUrunleriIsimList.get(urunSecim)+" kac kg olsun");
-                        sepeteUrunMiktariEkle(scan.nextDouble());
-                        sepeteUrunFiyatiEkle(manavUrunleriFiyatList.get(urunSecim));
+                        index = contains(sepetUrunIsmi, manavUrunleriIsimList.get(urunSecim));
+                        System.out.println(manavUrunleriIsimList.get(urunSecim) + " kac kg olsun");
+                        urunMiktariKg = scan.nextDouble();
+                        if (index == -1) {
+                            sepeteUrunAdiEkle(manavUrunleriIsimList.get(urunSecim));
+
+                            sepeteUrunMiktariEkle(urunMiktariKg);
+                            sepeteUrunFiyatiEkle(manavUrunleriFiyatList.get(urunSecim));
+                        } else {
+                            sepeteUrunMiktariEkle(index, sepetUrunKg.get(index) + urunMiktariKg);
+                        }
                     }
 
-                    if(urunSecim==20){
-                        cikis=20;
+                    if (urunSecim == 20) {
+                        cikis = 20;
                     }
                 }
 
@@ -220,15 +235,32 @@ public class Manav {
             } else
                 System.out.println("Yanlis secim yaptiniz");
         }
-        String str="              ";
-        for(int i=0;i<sepetUrunIsmi.size();i++){
+        String str = "              ";
+        for (int i = 0; i < sepetUrunIsmi.size(); i++) {
 
-            System.out.println(sepetUrunIsmi.get(i)+str.substring(0,str.length()-sepetUrunIsmi.get(i).length())
-                    +"   "+sepetUrunFiyati.get(i)+"  x  "+sepetUrunKg.get(i)+"="+(sepetUrunFiyati.get(i)*sepetUrunKg.get(i)));
+            System.out.println(sepetUrunIsmi.get(i) + str.substring(0, str.length() - sepetUrunIsmi.get(i).length())
+                    + "   " + sepetUrunFiyati.get(i) + "  x  " + sepetUrunKg.get(i) + "=" + (sepetUrunFiyati.get(i) * sepetUrunKg.get(i)));
 
         }
 
 
+    }
+
+    public static int contains(List<String> list, String product) {
+        int index = -1;
+        int count = 0;
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(0).equals(product)) {
+                index = i;
+                break;
+            }
+        }
+        return index;
+    }
+
+
+    public static void main(String[] args) {
+        runMarket();
     }
 
 }
