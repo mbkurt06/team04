@@ -137,11 +137,7 @@ public class Manav {
     }
 
     
-    public static void sepetUrunlerKg(List<Double> sepetUrunKg) {
-        sepetUrunKg.add(1.5);
-
-    }
-
+   
 
     }
 
