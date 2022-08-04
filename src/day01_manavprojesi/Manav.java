@@ -11,6 +11,7 @@ public class Manav {
     static Scanner scan = new Scanner(System.in);
 
 
+
     public static List<String> manavUrunler(){ //Manav urunleri icin liste
         List<String> manavName=new ArrayList<>();
         manavName.add("Domates");
@@ -133,6 +134,14 @@ public class Manav {
                 " 04 Kefir         3.10 TL\n" +
                 " 05 Burma peynir  1.20 TL\n" +
                 " 06 Ayran         1.90 TL\n" );
+    }
+
+    
+    public static void sepetUrunlerKg(List<Double> sepetUrunKg) {
+        sepetUrunKg.add(1.5);
+
+    }
+
 
     }
 
@@ -151,4 +160,5 @@ public class Manav {
         } else
             System.out.println("Yanlis secim yaptiniz");
     }
+
 }
