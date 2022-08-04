@@ -140,7 +140,18 @@ public class Manav {
    
 
     }
+ public static void sepeteUrunMiktariEkle(Double miktar) {
+        sepetUrunKg.add(miktar);
 
+    }
+
+    public static void sepeteUrunFiyatiEkle(Double price) {
+        sepetUrunFiyati.add(price);
+    }
+
+    public static void sepeteUrunAdiEkle(String urunAdi) {
+        sepetUrunIsmi.add(urunAdi);
+    }
     public static void main(String[] args) {
         System.out.println("     ==Gida Marketimize Hoş Geldiniz!==");
         System.out.println("Asagidaki sayilar ile istediginiz urunlere gidin \n" +
