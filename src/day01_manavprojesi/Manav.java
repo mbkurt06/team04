@@ -149,7 +149,7 @@ public class Manav {
             System.out.printf("%-5d  %-15s  %-5.2f€  %-5.2fKg  %-5.2f€\n", i, sepetUrunIsmi.get(i), sepetUrunFiyati.get(i), sepetUrunKg.get(i), price);
             summPrice += sepetUrunFiyati.get(i) * sepetUrunKg.get(i);
         }
-        System.out.printf("Toplam fiyat: %-5.2f €",summPrice);
+        System.out.printf("Toplam fiyat: %-5.2f €", summPrice);
     }
 
     //muhammet
@@ -193,7 +193,7 @@ public class Manav {
     }
 
 
-
+    //muhammet
     public static void sepettenUrunCikar() {
         boolean urunCikarmayaDevamEdilsinMi = true;
         int index;
@@ -201,23 +201,22 @@ public class Manav {
         int durum;
         boolean sepettenCikis = true;
         while (urunCikarmayaDevamEdilsinMi) {
-            sepettenCikis=true;
+            sepettenCikis = true;
             if (sepetUrunIsmi.size() > 0) {
                 getFatura();
                 System.out.println("Lutfen cikarmak istediginiz urunun id sini giriniz");
                 index = scan.nextInt();
                 if (index >= 0 && index < sepetUrunIsmi.size()) {
-                    urunAdi=sepetUrunIsmi.get(index);
+                    urunAdi = sepetUrunIsmi.get(index);
                     sepetUrunIsmi.remove(sepetUrunIsmi.get(index));
                     sepetUrunFiyati.remove(sepetUrunFiyati.get(index));
                     sepetUrunKg.remove(sepetUrunKg.get(index));
-                    System.out.println("Sepetten "+urunAdi+" cikarildi");
+                    System.out.println("Sepetten " + urunAdi + " cikarildi");
                     if (sepetUrunIsmi.size() > 0) {
                         while (sepettenCikis) {
                             System.out.println("Sepetten urun cikarmaya devam etmek icin 1 e bu menuden cikmak icin 2 ye basiniz");
                             durum = scan.nextInt();
                             if (durum == 1) {
-                                urunCikarmayaDevamEdilsinMi = true;
                                 sepettenCikis = false;
                             } else if (durum == 2) {
                                 urunCikarmayaDevamEdilsinMi = false;
@@ -275,11 +274,10 @@ public class Manav {
                 sepettenUrunCikar();
             } else if (secim == 5) {
                 getFatura();
-            }
-            else if (secim == 6) {
+            } else if (secim == 6) {
                 //getFatura();
                 alisVeriseDevamMi = false;
-            }else
+            } else
                 System.out.println("Yanlis secim yaptiniz");
         }
 
