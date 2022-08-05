@@ -7,6 +7,8 @@ import java.util.Scanner;
 public class Manav {
     static List<String> manavUrunleriIsimList = new ArrayList<>();
     static List<Double> manavUrunleriFiyatList = new ArrayList<>();
+    static List<String> sarkuteriUrunleriIsimList = new ArrayList<>();
+    static List<Double> sarkuteriUrunleriFiyatList = new ArrayList<>();
 
     static List<Double> sepetUrunFiyati = new ArrayList<>();// sepetteki urunlerin fiyati
     static List<Double> sepetUrunKg = new ArrayList<>();
@@ -58,7 +60,7 @@ public class Manav {
         sarkuteriName.add("Duman");
         sarkuteriName.add("Jambon");
 
-        return sarkuteriUrunler();
+        return sarkuteriName;
     }
 
     //Leyla Hanim
@@ -72,7 +74,7 @@ public class Manav {
         sarkFiy.add(5.90);
         sarkFiy.add(4.45);
 
-        return sarkuteriFiyatlar();
+        return sarkFiy;
     }
 
     //Leyla Hanim
@@ -103,132 +105,144 @@ public class Manav {
         return sarkuteriFiyatlar();
     }
 
-    //Leyla Hanim
-    public static void printManav() {
+    public static void printProduct(List<String> productName, List<Double> productPrice) {
 
         System.out.println(" No  Ürün    Fiyat\n" +
-                " == ======= =======\n" +
-                " 00 Domates 2.10 TL\n" +
-                " 01 Patates 3.20 TL\n" +
-                " 02 Biber   1.50 TL\n" +
-                " 03 Soğan   2.30 TL\n" +
-                " 04 Havuç   3.10 TL\n" +
-                " 05 Elma    1.20 TL\n" +
-                " 06 Muz     1.90 TL\n" +
-                " 07 Çilek   6.10 TL\n" +
-                " 08 Kavun   4.30 TL\n" +
-                " 09 Üzüm    2.70 TL\n" +
-                " 10 Limon   0.50 TL\n");
+                " == ======= =======\n");
+        for (int i = 0; i < productName.size(); i++) {
+            System.out.printf("%-2d  %-8s     %-5.2f\n",i, productName.get(i), productPrice.get(i));
+        }
     }
+        //Leyla Hanim
+        public static void printManav() {
 
-    //Leyla Hanim
-    public static void printSarkuteri() {
-        System.out.println(" No  Ürün    Fiyat\n" +
-                " == ======= =======\n" +
-                " 00 Pastirma  2.10 TL\n" +
-                " 01 Sucuk     3.20 TL\n" +
-                " 02 Selam     1.50 TL\n" +
-                " 03 Sosis     2.30 TL\n" +
-                " 04 Kavurma   3.10 TL\n" +
-                " 05 Duman     1.20 TL\n" +
-                " 06 Jambon    1.90 TL\n");
+            System.out.println(" No  Ürün    Fiyat\n" +
+                    " == ======= =======\n" +
+                    " 00 Domates 2.10 TL\n" +
+                    " 01 Patates 3.20 TL\n" +
+                    " 02 Biber   1.50 TL\n" +
+                    " 03 Soğan   2.30 TL\n" +
+                    " 04 Havuç   3.10 TL\n" +
+                    " 05 Elma    1.20 TL\n" +
+                    " 06 Muz     1.90 TL\n" +
+                    " 07 Çilek   6.10 TL\n" +
+                    " 08 Kavun   4.30 TL\n" +
+                    " 09 Üzüm    2.70 TL\n" +
+                    " 10 Limon   0.50 TL\n");
+        }
+
+        //Leyla Hanim
+        public static void printSarkuteri () {
+            System.out.println(" No  Ürün    Fiyat\n" +
+                    " == ======= =======\n" +
+                    " 00 Pastirma  2.10 TL\n" +
+                    " 01 Sucuk     3.20 TL\n" +
+                    " 02 Selam     1.50 TL\n" +
+                    " 03 Sosis     2.30 TL\n" +
+                    " 04 Kavurma   3.10 TL\n" +
+                    " 05 Duman     1.20 TL\n" +
+                    " 06 Jambon    1.90 TL\n");
 
 
-    }
+        }
 /*    public static void urunEkleManav(String isim,Double fiyat){
         manavUrunleriIsimList.add(isim);
         manavUrunleriFiyatList.add(fiyat);
     }*/
 
-    //Leyla Hanim
-    public static void printSutUrun() {
-        System.out.println(" No  Ürün    Fiyat\n" +
-                " == ======= =======\n" +
-                " 00 Sut           2.10 TL\n" +
-                " 01 Beyaz Peynir  3.20 TL\n" +
-                " 02 Süzme         1.50 TL\n" +
-                " 03 Yogurt        2.30 TL\n" +
-                " 04 Kefir         3.10 TL\n" +
-                " 05 Burma peynir  1.20 TL\n" +
-                " 06 Ayran         1.90 TL\n");
-    }
-
-    //Adem Bey
-    public static void sepeteUrunMiktariEkle(Double miktar) {
-        sepetUrunKg.add(miktar);
-
-    }
-
-    //Adem Bey
-    public static void sepeteUrunFiyatiEkle(Double price) {
-        sepetUrunFiyati.add(price);
-    }
-
-    //Adem Bey
-    public static void sepeteUrunAdiEkle(String urunAdi) {
-        sepetUrunIsmi.add(urunAdi);
-    }
-
-
-    public static void getFatura(List<String> sepetUrunIsmi, List<Double> sepetUrunFiyati, List<Double> sepetUrunKg) {
-
-    }
-
-    public static void main(String[] args) {
-        manavUrunleriIsimList = manavUrunler();
-        manavUrunleriFiyatList = manavFiyat();
-        boolean alisVeriseDevamMi = true;
-        int secim = 0;
-        int urunSecim = 0;
-        int cikis;
-
-        while (alisVeriseDevamMi) {
-            secim = 0;
-            cikis = 1;
-
-            System.out.println("     ==Gida Marketimize Hoş Geldiniz!==");
-            System.out.println("Asagidaki sayilar ile istediginiz urunlere gidin \n" +
-                    "   1 - Manav\n   2 - Sharkuteri\n   3 - Sut urunleri\n   4 - Kasa\n   5 - Cikis \nSeciminiz: ");
-
-            secim = scan.nextInt();
-            if (secim == 1) // Kullanici ilk basta hangi urun paketine gidecekse burdan secim yapar
-            {
-                while (cikis != 20) {
-                    printManav();
-                    System.out.println("Bir ust menuye gecmek icin 20 a basiniz");
-                    urunSecim = scan.nextInt();
-                    if (urunSecim >= 0 && urunSecim < manavUrunleriIsimList.size()) {
-                        sepeteUrunAdiEkle(manavUrunleriIsimList.get(urunSecim));
-                        System.out.println(manavUrunleriIsimList.get(urunSecim)+" kac kg olsun");
-                        sepeteUrunMiktariEkle(scan.nextDouble());
-                        sepeteUrunFiyatiEkle(manavUrunleriFiyatList.get(urunSecim));
-                    }
-
-                    if(urunSecim==20){
-                        cikis=20;
-                    }
-                }
-
-            } else if (secim == 2) {
-                printSarkuteri();
-            } else if (secim == 3) {
-                printSutUrun();
-            } else if (secim == 4) {
-                //getFatura();
-            } else if (secim == 5) {
-                alisVeriseDevamMi = false;
-            } else
-                System.out.println("Yanlis secim yaptiniz");
+        //Leyla Hanim
+        public static void printSutUrun () {
+            System.out.println(" No  Ürün    Fiyat\n" +
+                    " == ======= =======\n" +
+                    " 00 Sut           2.10 TL\n" +
+                    " 01 Beyaz Peynir  3.20 TL\n" +
+                    " 02 Süzme         1.50 TL\n" +
+                    " 03 Yogurt        2.30 TL\n" +
+                    " 04 Kefir         3.10 TL\n" +
+                    " 05 Burma peynir  1.20 TL\n" +
+                    " 06 Ayran         1.90 TL\n");
         }
-        String str="              ";
-        for(int i=0;i<sepetUrunIsmi.size();i++){
 
-            System.out.println(sepetUrunIsmi.get(i)+str.substring(0,str.length()-sepetUrunIsmi.get(i).length())
-                    +"   "+sepetUrunFiyati.get(i)+"  x  "+sepetUrunKg.get(i)+"="+(sepetUrunFiyati.get(i)*sepetUrunKg.get(i)));
+        //Adem Bey
+        public static void sepeteUrunMiktariEkle (Double miktar){
+            sepetUrunKg.add(miktar);
 
         }
 
+        //Adem Bey
+        public static void sepeteUrunFiyatiEkle (Double price){
+            sepetUrunFiyati.add(price);
+        }
+
+        //Adem Bey
+        public static void sepeteUrunAdiEkle (String urunAdi){
+            sepetUrunIsmi.add(urunAdi);
+        }
+
+
+        public static void getFatura
+        (List < String > sepetUrunIsmi, List < Double > sepetUrunFiyati, List < Double > sepetUrunKg){
+
+        }
+
+        public static void main (String[]args){
+            manavUrunleriIsimList = manavUrunler();// bir listenin icini doldurmak
+            manavUrunleriFiyatList = manavFiyat();
+            sarkuteriUrunleriIsimList=sarkuteriUrunler();
+            sarkuteriUrunleriFiyatList=sarkuteriFiyatlar();
+            boolean alisVeriseDevamMi = true;
+            int secim = 0;
+            int urunSecim = 0;
+            int cikis;
+
+            while (alisVeriseDevamMi) {
+                secim = 0;
+                cikis = 1;
+
+                System.out.println("     ==Gida Marketimize Hoş Geldiniz!==");
+                System.out.println("Asagidaki sayilar ile istediginiz urunlere gidin \n" +
+                        "   1 - Manav\n   2 - Sharkuteri\n   3 - Sut urunleri\n   4 - Kasa\n   5 - Cikis \nSeciminiz: ");
+
+                secim = scan.nextInt();
+                if (secim == 1) // Kullanici ilk basta hangi urun paketine gidecekse burdan secim yapar
+                {
+                    while (cikis != 20) {
+                       // printManav();
+                        printProduct(manavUrunleriIsimList,manavUrunleriFiyatList);
+                        System.out.println("Bir ust menuye gecmek icin 20 a basiniz");
+                        urunSecim = scan.nextInt();
+                        if (urunSecim >= 0 && urunSecim < manavUrunleriIsimList.size()) {
+                            sepeteUrunAdiEkle(manavUrunleriIsimList.get(urunSecim));
+                            System.out.println(manavUrunleriIsimList.get(urunSecim) + " kac kg olsun");
+                            sepeteUrunMiktariEkle(scan.nextDouble());
+                            sepeteUrunFiyatiEkle(manavUrunleriFiyatList.get(urunSecim));
+                        }
+
+                        if (urunSecim == 20) {
+                            cikis = 20;
+                        }
+                    }
+
+                } else if (secim == 2) {
+                    printProduct(sarkuteriUrunleriIsimList,sarkuteriUrunleriFiyatList);
+                } else if (secim == 3) {
+                    printSutUrun();
+                } else if (secim == 4) {
+                    //getFatura();
+                } else if (secim == 5) {
+                    alisVeriseDevamMi = false;
+                } else
+                    System.out.println("Yanlis secim yaptiniz");
+            }
+            String str = "              ";
+            for (int i = 0; i < sepetUrunIsmi.size(); i++) {
+
+                System.out.println(sepetUrunIsmi.get(i) + str.substring(0, str.length() - sepetUrunIsmi.get(i).length())
+                        + "   " + sepetUrunFiyati.get(i) + "  x  " + sepetUrunKg.get(i) + "=" + (sepetUrunFiyati.get(i) * sepetUrunKg.get(i)));
+
+            }
+
+
+        }
 
     }
-
-}
