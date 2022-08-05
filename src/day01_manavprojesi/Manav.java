@@ -209,9 +209,9 @@ public class Manav {
                         index = contains(sepetUrunIsmi, manavUrunleriIsimList.get(urunSecim));
                         System.out.println(manavUrunleriIsimList.get(urunSecim) + " kac kg olsun");
                         urunMiktariKg = scan.nextDouble();
+
                         if (index == -1) {
                             sepeteUrunAdiEkle(manavUrunleriIsimList.get(urunSecim));
-
                             sepeteUrunMiktariEkle(urunMiktariKg);
                             sepeteUrunFiyatiEkle(manavUrunleriFiyatList.get(urunSecim));
                         } else {
