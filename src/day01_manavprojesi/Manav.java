@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Manav {
-    static List<String> sepetUrunIsmi=new ArrayList<>();//sepetteki urunlerin ismini tutan liste
+    static List<Integer> sepetUrunNo=new ArrayList<>();//sepetteki urunlerin ismini tutan liste
     static List<Double> sepetUrunFiyati= new ArrayList<>();// sepetteki urunlerin fiyati
     static List<Double> sepetUrunKg= new ArrayList<>();
     static Scanner scan = new Scanner(System.in);
@@ -29,7 +29,7 @@ public class Manav {
         System.out.println("urunlerimiz");
         //Adem Bey
 
-        sepeteEklenenUrunler(sepetUrunIsmi);
+        sepeteEklenenUrunler(sepetUrunNo);
         sepetUrunFiyatilari(sepetUrunFiyati);
         sepetUrunlerKg(sepetUrunKg);
 
@@ -56,8 +56,8 @@ public class Manav {
         sepetUrunFiyati.add(2.1);
     }
 
-    public static void sepeteEklenenUrunler(List<String> sepetUrunIsmi) {
-        sepetUrunIsmi.add("Domates");
+    public static void sepeteEklenenUrunler(List<Integer> sepetUrunNo) {
+        sepetUrunNo.add(00);
     }
 
 
