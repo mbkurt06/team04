@@ -26,7 +26,8 @@ public class Manav {
     }
 
     public static void sepeteUrunAdiEkle(String urunAdi) {
-        sepetUrunIsmi.add(urunAdi);
+        sepetUrunIsmi.add(urunAdi);   
+        System.out.println("Adem");
     }
 
 
