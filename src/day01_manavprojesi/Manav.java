@@ -11,6 +11,7 @@ public class Manav {
     static Scanner scan = new Scanner(System.in);
     public static void main(String[] args) {
 
+<<<<<<< HEAD
         System.out.println("adem branch");
 
         System.out.println(" No  Ürün    Fiyat\n" +
@@ -43,21 +44,30 @@ public class Manav {
        olarak seçilen ürünün cins kilosu gibi bilgiler verilecek
          */
 
+=======
+       
+>>>>>>> 4c661934f13d996372dc9625f6f2afd0a5f22c3f
 
 
     }
 
-    public static void sepetUrunlerKg(List<Double> sepetUrunKg) {
-        sepetUrunKg.add(1.5);
+    public static void sepeteUrunMiktariEkle(Double miktar) {
+        sepetUrunKg.add(miktar);
 
     }
 
-    public static void sepetUrunFiyatilari(List<Double> sepetUrunFiyati) {
-        sepetUrunFiyati.add(2.1);
+    public static void sepeteUrunFiyatiEkle(Double price) {
+        sepetUrunFiyati.add(price);
     }
 
+<<<<<<< HEAD
     public static void sepeteEklenenUrunler(List<Integer> sepetUrunNo) {
         sepetUrunNo.add(00);
+=======
+    public static void sepeteUrunAdiEkle(String urunAdi) {
+        sepetUrunIsmi.add(urunAdi);   
+        System.out.println("Adem");
+>>>>>>> 4c661934f13d996372dc9625f6f2afd0a5f22c3f
     }
 
 
