@@ -149,11 +149,7 @@ public class Manav {
             System.out.printf("%-5d  %-15s  %-5.2f€  %-5.2fKg  %-5.2f€\n", i, sepetUrunIsmi.get(i), sepetUrunFiyati.get(i), sepetUrunKg.get(i), price);
             summPrice += sepetUrunFiyati.get(i) * sepetUrunKg.get(i);
         }
-<<<<<<< HEAD
         System.out.printf("Toplam fiyat: %-5.2f €", summPrice);
-=======
-        System.out.printf("Toplam fiyat: %-5.2f €",summPrice);
->>>>>>> 908cf8c63120a28a4af484cf44a691a7542bbaf1
     }
 
     //muhammet
@@ -197,11 +193,7 @@ public class Manav {
     }
 
 
-<<<<<<< HEAD
     //muhammet
-=======
-
->>>>>>> 908cf8c63120a28a4af484cf44a691a7542bbaf1
     public static void sepettenUrunCikar() {
         boolean urunCikarmayaDevamEdilsinMi = true;
         int index;
@@ -209,38 +201,22 @@ public class Manav {
         int durum;
         boolean sepettenCikis = true;
         while (urunCikarmayaDevamEdilsinMi) {
-<<<<<<< HEAD
             sepettenCikis = true;
-=======
-            sepettenCikis=true;
->>>>>>> 908cf8c63120a28a4af484cf44a691a7542bbaf1
             if (sepetUrunIsmi.size() > 0) {
                 getFatura();
                 System.out.println("Lutfen cikarmak istediginiz urunun id sini giriniz");
                 index = scan.nextInt();
                 if (index >= 0 && index < sepetUrunIsmi.size()) {
-<<<<<<< HEAD
                     urunAdi = sepetUrunIsmi.get(index);
                     sepetUrunIsmi.remove(sepetUrunIsmi.get(index));
                     sepetUrunFiyati.remove(sepetUrunFiyati.get(index));
                     sepetUrunKg.remove(sepetUrunKg.get(index));
                     System.out.println("Sepetten " + urunAdi + " cikarildi");
-=======
-                    urunAdi=sepetUrunIsmi.get(index);
-                    sepetUrunIsmi.remove(sepetUrunIsmi.get(index));
-                    sepetUrunFiyati.remove(sepetUrunFiyati.get(index));
-                    sepetUrunKg.remove(sepetUrunKg.get(index));
-                    System.out.println("Sepetten "+urunAdi+" cikarildi");
->>>>>>> 908cf8c63120a28a4af484cf44a691a7542bbaf1
                     if (sepetUrunIsmi.size() > 0) {
                         while (sepettenCikis) {
                             System.out.println("Sepetten urun cikarmaya devam etmek icin 1 e bu menuden cikmak icin 2 ye basiniz");
                             durum = scan.nextInt();
                             if (durum == 1) {
-<<<<<<< HEAD
-=======
-                                urunCikarmayaDevamEdilsinMi = true;
->>>>>>> 908cf8c63120a28a4af484cf44a691a7542bbaf1
                                 sepettenCikis = false;
                             } else if (durum == 2) {
                                 urunCikarmayaDevamEdilsinMi = false;
@@ -298,15 +274,10 @@ public class Manav {
                 sepettenUrunCikar();
             } else if (secim == 5) {
                 getFatura();
-<<<<<<< HEAD
             } else if (secim == 6) {
-=======
-            }
-            else if (secim == 6) {
->>>>>>> 908cf8c63120a28a4af484cf44a691a7542bbaf1
                 //getFatura();
                 alisVeriseDevamMi = false;
-            }else
+            } else
                 System.out.println("Yanlis secim yaptiniz");
         }
 
