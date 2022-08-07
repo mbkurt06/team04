@@ -1,6 +1,7 @@
 package day01_manavprojesi;
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
@@ -126,7 +127,6 @@ public class Manav {
     //Adem Bey
     public static void sepeteUrunMiktariEkle(int index, Double miktar) {
         sepetUrunKg.set(index, miktar);
-
     }
 
     //Adem
@@ -150,7 +150,9 @@ public class Manav {
             summPrice += sepetUrunFiyati.get(i) * sepetUrunKg.get(i);
         }
         System.out.printf("Toplam fiyat: %-5.2f €", summPrice);
+        System.out.println();
     }
+
 
     //muhammet
     public static void printList(List<String> productName, List<Double> productPrice) {
@@ -247,12 +249,9 @@ public class Manav {
         sutUrunleriFiyatList = sutFiyatlar();
         boolean alisVeriseDevamMi = true;
         int secim = 0;
-        int urunSecim = 0;
-        int cikis;
+
 
         while (alisVeriseDevamMi) {
-            secim = 0;
-            cikis = 1;
             int index = -1;
             Double urunMiktariKg = 0.0;
 
@@ -260,7 +259,9 @@ public class Manav {
             System.out.println("Asagidaki sayilar ile istediginiz urunlere gidin \n" +
                     "   1 - Manav\n   2 - Sarkuteri\n   3 - Sut urunleri\n   4 - Sepetten Urun Cikar\n   5 - Sepetimde Ne Var\n   6 - Kasa-Cikis\n Seciminiz: ");
 
+
             secim = scan.nextInt();
+
             if (secim == 1) // Kullanici ilk basta hangi urun paketine gidecekse burdan secim yapar
             {
                 printList(manavUrunleriIsimList, manavUrunleriFiyatList);
@@ -278,7 +279,7 @@ public class Manav {
                 //getFatura();
                 alisVeriseDevamMi = false;
             } else
-                System.out.println("Yanlis secim yaptiniz");
+                System.out.println("Yanlis rakam girdiniz yaptiniz");
         }
 
         getFatura();
@@ -297,7 +298,6 @@ public class Manav {
         }
         return index;
     }
-
 
     public static void main(String[] args) {
         runMarket();
