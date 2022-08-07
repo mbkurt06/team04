@@ -124,7 +124,7 @@ public class Manav {
 
     }
 
-    //Adem Bey
+    //Adem
     public static void sepeteUrunMiktariEkle(int index, Double miktar) {
         sepetUrunKg.set(index, miktar);
     }
